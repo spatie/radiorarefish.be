@@ -11,6 +11,7 @@
     <table class="table">
         <thead>
         <th>Name</th>
+        <th>Publish date</th>
         <th></th>
         </thead>
         <tbody>
@@ -18,6 +19,7 @@
         @foreach($playlists as $playlist)
             <tr>
                 <td><a href="{{ action('PlaylistsController@edit', [$playlist->id]) }}">{{ $playlist->name }}</a></td>
+                <td>{{ $playlist->publish_date->format('d.m.Y') }}</td>
                 <td>@include('_partials.deleteButton', ['url' => action('PlaylistsController@destroy', [$playlist->id])])</td>
             </tr>
         @endforeach
