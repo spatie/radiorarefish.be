@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "991a183aff49fd9db81fe471900e82dd",
+    "content-hash": "6535159c6f25e5080c1642f39433d2c0",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -1321,6 +1321,56 @@
                 "uuid"
             ],
             "time": "2017-03-26T20:37:53+00:00"
+        },
+        {
+            "name": "spatie/laravel-sluggable",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-sluggable.git",
+                "reference": "582eb1554384a3911f5c91ff96b99621be582118"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/582eb1554384a3911f5c91ff96b99621be582118",
+                "reference": "582eb1554384a3911f5c91ff96b99621be582118",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.0.0|~5.1.0|~5.2.0|~5.3.0|~5.4.0",
+                "illuminate/support": "~5.0.0|~5.1.0|~5.2.0|~5.3.0|~5.4.0",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "orchestra/database": "~3.2.0|~3.3.0|~3.4.0@dev",
+                "orchestra/testbench": "~3.2.0|~3.3.0|~3.4.0@dev",
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Sluggable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generate slugs when saving Eloquent models",
+            "homepage": "https://github.com/spatie/laravel-sluggable",
+            "keywords": [
+                "laravel-sluggable",
+                "spatie"
+            ],
+            "time": "2017-01-24T19:28:56+00:00"
         },
         {
             "name": "spatie/laravel-tail",
