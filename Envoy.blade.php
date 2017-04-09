@@ -42,7 +42,7 @@ yarn
 
 @task('generate assets', ['on' => 'web'])
 {{ logMessage("🌅  Generating assets...") }}
-cd {{ $newReleaseDir }};
+cd '{{ $pathOnServer }}'
 yarn run production
 @endtask
 
