@@ -11,7 +11,7 @@ class PlaylistsController extends Controller
 {
     public function index()
     {
-        $playlists = Playlist::orderBy('publish_date', 'asc')->get();
+        $playlists = Playlist::get();
 
         return view('back.playlists.index')->with(compact('playlists'));
     }

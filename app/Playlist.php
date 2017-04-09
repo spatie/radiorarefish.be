@@ -6,6 +6,7 @@ use App\Http\Requests\PlaylistRequest;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Builder;
 use Laravel\Scout\Searchable;
 
 class Playlist extends Model
@@ -18,7 +19,14 @@ class Playlist extends Model
 
     public $with = ['user'];
 
+    protected static function boot()
+    {
+        parent::boot();
 
+        static::addGlobalScope('orderOnPublishDate', function (Builder $builder) {
+            $builder->orderBy('publish_date', 'desc');
+        });
+    }
 
     public function getExcerptAttribute(): string
     {
