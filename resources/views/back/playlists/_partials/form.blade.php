@@ -10,7 +10,7 @@
 
 <div class="form-group">
     <label for="text">Text:</label>
-    <textarea class="form-control" name="text">{{ old('text', $playlist->text) }}</textarea>
+    <textarea rows="15" class="form-control" name="text">{{ old('text', $playlist->text) }}</textarea>
     @if($errors->has('text'))
         <div class="alert alert-danger">{{ $errors->first('text') }}</div>
     @endif
