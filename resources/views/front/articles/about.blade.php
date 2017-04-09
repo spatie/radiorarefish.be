@@ -4,4 +4,6 @@
 
     <h1>About</h1>
 
+    Coming soon...
+
 @endsection
