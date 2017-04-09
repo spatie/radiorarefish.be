@@ -35,8 +35,15 @@ composer install
 
 @task('run yarn', ['on' => 'web'])
 {{ logMessage("📦  Running Yarn...") }}
+cd '{{ $pathOnServer }}'
 yarn config set ignore-engines true
 yarn
+@endtask
+
+@task('generate assets', ['on' => 'web'])
+{{ logMessage("🌅  Generating assets...") }}
+cd {{ $newReleaseDir }};
+yarn run production
 @endtask
 
 @task('cache all the things', ['on' => 'web'])
@@ -74,6 +81,7 @@ bring app down
 pull changes on server
 run composer
 run yarn
+generate assets
 cache all the things
 migrate database
 bring app up
