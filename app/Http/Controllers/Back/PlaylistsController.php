@@ -35,17 +35,21 @@ class PlaylistsController extends Controller
 
     public function show(Playlist $playlist)
     {
-        return redirect()->action('Back\PlaylistController@index');
+        return redirect()->action('Back\PlaylistsController@index');
     }
 
     public function edit(Playlist $playlist)
     {
-        //
+        return view('back.playlists.edit', compact('playlist'));
     }
 
-    public function update(Request $request, Playlist $playlist)
+    public function update(PlaylistRequest $request, Playlist $playlist)
     {
-        //
+        $playlist->updateFromRequest($request);
+
+        Session::flash('message', 'The newsItem has been created');
+
+        return back();
     }
 
     public function destroy(Playlist $playlist)

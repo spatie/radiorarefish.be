@@ -18,7 +18,7 @@
 
 <div class="form-group">
     <label for="publish_date">Publish date:</label>
-    <input class="form-control" name="publish_date" value="{{ old('publish_date', $playlist->publish_date) }}">
+    <input class="form-control" name="publish_date" value="{{ old('publish_date', $playlist->publish_date->format('d.m.Y')) }}">
     @if($errors->has('publish_date'))
         <div class="alert alert-danger">{{ $errors->first('publish_date') }}</div>
     @endif
