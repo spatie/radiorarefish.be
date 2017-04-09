@@ -73,6 +73,7 @@ start deployment
 bring app down
 pull changes on server
 run composer
+run yarn
 cache all the things
 migrate database
 bring app up
