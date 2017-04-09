@@ -16,7 +16,7 @@
             @foreach($playlists as $playlist)
                 <tr>
                     <td>{{ $playlist->name }}</td>
-                    <td>{{ $playlist->text }}</td>
+                    <td>{{ $playlist->excerpt }}</td>
                     <td>{{ $playlist->publish_date->format('d/m/Y') }}</td>
                     <td>actions</td>
                 </tr>

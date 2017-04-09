@@ -43,10 +43,10 @@ class PlaylistsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Playlist  $playlist
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Playlist $playlist)
     {
         //
     }
@@ -54,10 +54,10 @@ class PlaylistsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Playlist  $playlist
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Playlist $playlist)
     {
         //
     }
@@ -66,10 +66,10 @@ class PlaylistsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Playlist  $playlist
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Playlist $playlist)
     {
         //
     }
@@ -77,11 +77,11 @@ class PlaylistsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Playlist  $playlist
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Playlist $playlist)
     {
-        //
+
     }
 }
