@@ -23,11 +23,17 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Playlist::class, function(\Faker\Generator $faker) {
+$factory->define(App\Playlist::class, function (\Faker\Generator $faker) {
+    $playlistContent = collect(range(1, $faker->numberBetween(1, 10)))
+        ->map(function (int $index) use ($faker) {
+            return "{$index}. {$faker->name} - {$faker->sentence} (from: \"{$faker->sentence()}\")";
+        })
+        ->implode("<br />");
+
     return [
         'name' => $faker->sentence(),
-        'text' => $faker->paragraph(),
-        'user_id' => function() {
+        'text' => $playlistContent,
+        'user_id' => function () {
             return factory(App\User::class)->create()->id;
         },
         'publish_date' => $faker->dateTimeBetween(),
