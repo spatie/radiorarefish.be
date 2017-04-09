@@ -85,6 +85,7 @@ cache all the things
 @endmacro
 
 @task('deploy only code', ['on' => 'web'])
+{{ logMessage("🏃  Deploying only code...") }}
 cd {{ $pathOnServer }}
 git pull origin master
 @endtask
