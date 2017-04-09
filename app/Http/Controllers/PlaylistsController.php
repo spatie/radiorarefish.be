@@ -9,11 +9,6 @@ use Illuminate\Support\Facades\Session;
 
 class PlaylistsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $playlists = Playlist::orderBy('publish_date', 'asc')->get();
@@ -21,11 +16,6 @@ class PlaylistsController extends Controller
         return view('playlists.index')->with(compact('playlists'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $playlist = new Playlist();
@@ -33,12 +23,6 @@ class PlaylistsController extends Controller
         return view('playlists.create')->with(compact('playlist'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(PlaylistRequest $request)
     {
         $playlist = Playlist::create($request->intersect(['name', 'text', 'publish_date']));
@@ -50,46 +34,21 @@ class PlaylistsController extends Controller
         return redirect()->action('PlaylistController@index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
     public function show(Playlist $playlist)
     {
         return redirect()->action('PlaylistController@index');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Playlist $playlist)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Playlist $playlist)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Playlist $playlist)
     {
         $playlist->delete();
