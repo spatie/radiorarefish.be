@@ -26,7 +26,7 @@ class PlaylistRequest extends FormRequest
         return [
             'name' => 'required',
             'text' => 'required',
-            'publish_date' => 'required|date_format:m.d.Y',
+            'publish_date' => 'required|date_format:d.m.Y',
         ];
     }
 }
