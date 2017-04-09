@@ -8,10 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Builder;
 use Laravel\Scout\Searchable;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 
 class Playlist extends Model
 {
-    use Searchable;
+    use Searchable,
+        HasSlug;
 
     public $dates = ['publish_date'];
 
@@ -26,6 +29,13 @@ class Playlist extends Model
         static::addGlobalScope('orderOnPublishDate', function (Builder $builder) {
             $builder->orderBy('publish_date', 'desc');
         });
+    }
+
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('name')
+            ->saveSlugsTo('slug');
     }
 
     public function getExcerptAttribute(): string
