@@ -4,8 +4,6 @@
 
     <h1>Playlists</h1>
 
-    @include('back._partials.flashMessage')
-
     <a class="btn btn-primary" href="{{ action('Back\PlaylistsController@create') }}">New item</a>
 
     <table class="table">

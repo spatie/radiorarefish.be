@@ -74,6 +74,8 @@
     </nav>
 
     <div class="container">
+        @include('back._partials.flashMessage')
+
         @yield('content')
     </div>
 

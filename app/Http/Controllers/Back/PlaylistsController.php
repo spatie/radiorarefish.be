@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Back;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PlaylistRequest;
 use App\Playlist;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class PlaylistsController extends Controller
