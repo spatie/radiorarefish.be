@@ -12,6 +12,9 @@ Route::prefix('admin')
 Route::namespace('Front')->group(function() {
     Route::get('search', 'SearchController@index');
 
+    Route::get('how-to-listen', 'ArticleController@howToListen');
+    Route::get('about', 'ArticleController@about');
+
     Route::get('/', 'PlaylistsController@index');
     Route::get('/playlist/{slug}', 'PlaylistsController@detail');
 });
