@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('search', function(\Illuminate\Http\Request $request) {
+   return \App\Playlist::search($request->search)->get();
+});
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {

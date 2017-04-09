@@ -2,12 +2,9 @@
 
 use App\Playlist;
 use Illuminate\Database\Seeder;
-use Laravel\Scout\Searchable;
 
 class PlaylistSeeder extends Seeder
 {
-    use Searchable;
-
     /**
      * Run the database seeds.
      *
