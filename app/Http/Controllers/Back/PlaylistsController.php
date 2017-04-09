@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Back;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PlaylistRequest;
 use App\Playlist;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Session;
 
 class PlaylistsController extends Controller
@@ -19,6 +20,8 @@ class PlaylistsController extends Controller
     public function create()
     {
         $playlist = new Playlist();
+
+        $playlist->publish_date = Carbon::now();
 
         return view('back.playlists.create')->with(compact('playlist'));
     }
