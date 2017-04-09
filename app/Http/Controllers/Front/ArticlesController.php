@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 
-class ArticleController extends Controller
+class ArticlesController extends Controller
 {
     public function howToListen()
     {
