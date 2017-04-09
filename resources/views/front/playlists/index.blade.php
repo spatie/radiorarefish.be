@@ -2,6 +2,7 @@
 
 @section('content')
 
+    @include('front._partials.headerBig')
 
     @foreach($playlists as $playlist)
         <div class="row">
