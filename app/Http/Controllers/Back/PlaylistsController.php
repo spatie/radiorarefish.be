@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Back;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\PlaylistRequest;
 use App\Playlist;
 use Illuminate\Http\Request;
@@ -13,14 +14,14 @@ class PlaylistsController extends Controller
     {
         $playlists = Playlist::orderBy('publish_date', 'asc')->get();
 
-        return view('playlists.index')->with(compact('playlists'));
+        return view('back.playlists.index')->with(compact('playlists'));
     }
 
     public function create()
     {
         $playlist = new Playlist();
 
-        return view('playlists.create')->with(compact('playlist'));
+        return view('back.playlists.create')->with(compact('playlist'));
     }
 
     public function store(PlaylistRequest $request)
@@ -29,12 +30,12 @@ class PlaylistsController extends Controller
 
         Session::flash('message', 'The newsItem has been created');
 
-        return redirect()->action('PlaylistsController@index');
+        return redirect()->action('Back\PlaylistsController@index');
     }
 
     public function show(Playlist $playlist)
     {
-        return redirect()->action('PlaylistController@index');
+        return redirect()->action('Back\PlaylistController@index');
     }
 
     public function edit(Playlist $playlist)
