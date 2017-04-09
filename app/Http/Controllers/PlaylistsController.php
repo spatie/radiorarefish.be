@@ -25,13 +25,11 @@ class PlaylistsController extends Controller
 
     public function store(PlaylistRequest $request)
     {
-        $playlist = Playlist::create($request->intersect(['name', 'text', 'publish_date']));
-
-        $playlist->save();
+        (new Playlist())->updateFromRequest($request);
 
         Session::flash('message', 'The newsItem has been created');
 
-        return redirect()->action('PlaylistController@index');
+        return redirect()->action('PlaylistsController@index');
     }
 
     public function show(Playlist $playlist)

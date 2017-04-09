@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Http\Requests\PlaylistRequest;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Laravel\Scout\Searchable;
@@ -16,6 +18,8 @@ class Playlist extends Model
 
     public $with = ['user'];
 
+
+
     public function getExcerptAttribute(): string
     {
         return str_limit($this->text, 100);
@@ -29,5 +33,15 @@ class Playlist extends Model
     public function searchableAs()
     {
         return 'radiorarefish.be.dev';
+    }
+
+    public function updateFromRequest(PlaylistRequest $request)
+    {
+        $this->name = $request->name;
+        $this->text = $request->text;
+        $this->publish_date = Carbon::createFromFormat('d.m.Y', $request->publish_date);
+        $this->user_id = auth()->user()->id;
+
+        $this->save();
     }
 }
