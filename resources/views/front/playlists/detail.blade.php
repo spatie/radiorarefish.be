@@ -3,7 +3,7 @@
 @section('content')
     <a href="{{ action('Front\PlaylistsController@index') }}">
         <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-        Back to list
+        Back to all playlists
     </a>
 
     <h1>{{ $playlist->name }}</h1>
