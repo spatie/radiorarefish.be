@@ -13,4 +13,11 @@ class PlaylistsController extends Controller
 
         return view('front.playlists.index', compact('playlists'));
     }
+
+    public function detail($slug)
+    {
+        abort_unless($playlist = Playlist::where('slug', $slug)->first(), 404);
+
+        return view('front.playlists.detail', compact('playlist'));
+    }
 }
