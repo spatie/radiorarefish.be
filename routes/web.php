@@ -10,11 +10,9 @@ Route::prefix('admin')
     });
 
 Route::namespace('Front')->group(function() {
+    Route::get('search', 'SearchController@index');
+
     Route::get('/', 'PlaylistsController@index');
     Route::get('/{slug}', 'PlaylistsController@detail');
-
-    Route::get('search', function (\Illuminate\Http\Request $request) {
-        return \App\Playlist::search($request->search)->get();
-    });
 });
 

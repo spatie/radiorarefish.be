@@ -19,9 +19,9 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <form class="navbar-form navbar-left">
+                    <form method="GET" action="{{ action('Front\SearchController@index') }} "class="navbar-form navbar-left">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search playlists">
+                            <input type="text" name="query" class="form-control" placeholder="Search playlists">
                         </div>
                         <button type="submit" class="btn btn-default">Search</button>
                     </form>
