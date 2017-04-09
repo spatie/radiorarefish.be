@@ -13,6 +13,6 @@ Route::namespace('Front')->group(function() {
     Route::get('search', 'SearchController@index');
 
     Route::get('/', 'PlaylistsController@index');
-    Route::get('/{slug}', 'PlaylistsController@detail');
+    Route::get('/playlist/{slug}', 'PlaylistsController@detail');
 });
 
