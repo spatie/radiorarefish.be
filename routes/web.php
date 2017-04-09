@@ -6,6 +6,9 @@ Route::prefix('admin')
     ->middleware('auth')
     ->namespace('Back')
     ->group(function () {
+        Route::get('/', function() {
+            return redirect()->action('PlaylistsController@index');
+        });
         Route::resource('playlists', 'PlaylistsController');
     });
 
