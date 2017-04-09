@@ -40,7 +40,18 @@ class PlaylistsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required',
+            'text' => 'required'
+        ]);
 
+        $playlist = Playlist::create($request->intersect(['name', 'text', 'publish_date']));
+
+        $playlist->save();
+
+        Session::flash('message', 'The newsItem has been created');
+
+        return redirect()->action('PlaylistController@index');
     }
 
     /**
