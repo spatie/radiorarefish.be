@@ -27,7 +27,9 @@ class PlaylistsController extends Controller
      */
     public function create()
     {
-        //
+        $playlist = new Playlist();
+
+        return view('playlists.create')->with(compact('playlist'));
     }
 
     /**
@@ -38,7 +40,7 @@ class PlaylistsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -49,7 +51,7 @@ class PlaylistsController extends Controller
      */
     public function show(Playlist $playlist)
     {
-        //
+        return redirect()->action('PlaylistController@index');
     }
 
     /**
