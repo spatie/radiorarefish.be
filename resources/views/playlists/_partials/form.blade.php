@@ -9,18 +9,18 @@
 </div>
 
 <div class="form-group">
-    <label for="name">Text:</label>
-    <textarea class="form-control" name="text">{{ old('name', $playlist->text) }}</textarea>
+    <label for="text">Text:</label>
+    <textarea class="form-control" name="text">{{ old('text', $playlist->text) }}</textarea>
     @if($errors->has('text'))
         <div class="alert alert-danger">{{ $errors->first('text') }}</div>
     @endif
 </div>
 
 <div class="form-group">
-    <label for="name">Publish date:</label>
-    <input class="form-control" name="name" value="{{ old('publish_date', $playlist->publish_date) }}">
+    <label for="publish_date">Publish date:</label>
+    <input class="form-control" name="publish_date" value="{{ old('publish_date', $playlist->publish_date) }}">
     @if($errors->has('publish_date'))
-        <div class="alert alert-danger">{{ $errors->first('name') }}</div>
+        <div class="alert alert-danger">{{ $errors->first('publish_date') }}</div>
     @endif
 </div>
 
