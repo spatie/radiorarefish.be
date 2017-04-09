@@ -42,7 +42,7 @@ yarn
 @task('cache all the things', ['on' => 'web'])
 {{ logMessage("✨  Optimizing installation...") }}
 cd '{{ $pathOnServer }}'
-php artisan clear-compiled;
+php artisan clear-compiled
 php artisan cache:clear
 
 php artisan optimize
@@ -50,7 +50,7 @@ php artisan config:cache
 sudo service php7.1-fpm restart
 @endtask
 
-@task('migrate database, ['on' => 'web'])
+@task('migrate database', ['on' => 'web'])
 {{ logMessage("🙈  Migrating database...") }}
 cd '{{ $pathOnServer }}'
 php artisan migrate --force
@@ -84,7 +84,7 @@ deploy only code
 cache all the things
 @endmacro
 
-@task('deploy only code',['on' => 'web'])
+@task('deploy only code', ['on' => 'web'])
 cd {{ $pathOnServer }}
 git pull origin master
 @endtask
