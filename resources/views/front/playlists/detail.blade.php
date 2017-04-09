@@ -9,4 +9,4 @@
     <h1>{{ $playlist->name }}</h1>
 
     {!! $playlist->text !!}
-@ensection
+@endsection

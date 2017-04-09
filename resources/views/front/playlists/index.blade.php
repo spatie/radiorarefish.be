@@ -3,7 +3,6 @@
 @section('content')
 
 
-
     @foreach($playlists as $playlist)
         <div class="row">
             <h2>
