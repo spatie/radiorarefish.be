@@ -9,7 +9,7 @@ return "echo '\033[32m" .$message. "\033[0m';\n";
 
 @servers(['web' => 'radiorarefish.be', 'local' => '127.0.0.1'])
 
-@task('start deplyment', ['on' => 'local'])
+@task('start deployment', ['on' => 'local'])
 {{ logMessage("🏃  Starting deployment...") }}
 git checkout master
 git pull origin master
