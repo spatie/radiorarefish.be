@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Playlist;
 use Illuminate\Http\Request;
 
 class PlaylistsController extends Controller
@@ -13,7 +14,9 @@ class PlaylistsController extends Controller
      */
     public function index()
     {
-        return view('playlists.index');
+        $playlists = Playlist::orderBy('publish_date', 'asc')->get();
+
+        return view('playlists.index')->with(compact('playlists'));
     }
 
     /**
