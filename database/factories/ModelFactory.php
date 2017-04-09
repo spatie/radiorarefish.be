@@ -28,7 +28,7 @@ $factory->define(App\Playlist::class, function (\Faker\Generator $faker) {
         ->map(function (int $index) use ($faker) {
             return "{$index}. {$faker->name} - {$faker->sentence} (from: \"{$faker->sentence()}\")";
         })
-        ->implode("<br />");
+        ->implode('<br />');
 
     return [
         'name' => $faker->sentence(),
