@@ -16,4 +16,12 @@
     @endif
 </div>
 
+<div class="form-group">
+    <label for="name">Publish date:</label>
+    <input class="form-control" name="name" value="{{ old('publish_date', $playlist->publish_date) }}">
+    @if($errors->has('publish_date'))
+        <div class="alert alert-danger">{{ $errors->first('name') }}</div>
+    @endif
+</div>
+
 <input class="btn btn-primary" type="submit" value="{{ $submitText }}">
