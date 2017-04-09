@@ -7,7 +7,7 @@ Route::prefix('admin')
     ->namespace('Back')
     ->group(function () {
         Route::get('/', function() {
-            return redirect()->action('PlaylistsController@index');
+            return redirect()->action('Back\PlaylistsController@index');
         });
         Route::resource('playlists', 'PlaylistsController');
     });
