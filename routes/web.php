@@ -22,6 +22,5 @@ Route::get('search', function(\Illuminate\Http\Request $request) {
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', 'HomeController@index');
     Route::resource('playlists', 'PlaylistsController');
 });
