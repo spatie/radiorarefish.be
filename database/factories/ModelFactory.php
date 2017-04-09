@@ -22,3 +22,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Playlist::class, function(\Faker\Generator $faker) {
+    return [
+        'name' => $faker->sentence(),
+        'text' => $faker->paragraph(),
+        'user_id' => function() {
+            return factory(App\User::class)->create()->id;
+        },
+        'publish_date' => $faker->dateTimeBetween(),
+    ];
+});

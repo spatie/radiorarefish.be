@@ -1,8 +1,9 @@
 <?php
 
+use App\Playlist;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class PlaylistSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(UserSeeder::class);
-        $this->call(PlaylistSeeder::class);
+        factory(Playlist::class, 50)->create(['user_id' => 1]);
     }
 }
