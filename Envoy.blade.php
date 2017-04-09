@@ -7,7 +7,7 @@ return "echo '\033[32m" .$message. "\033[0m';\n";
 }
 @endsetup
 
-@servers(['web' => 'spatie.be', 'local' => '127.0.0.1'])
+@servers(['web' => 'radiorarefish.be', 'local' => '127.0.0.1'])
 
 @task('start deplyment', ['on' => 'local'])
 {{ logMessage("🏃  Starting deployment...") }}
