@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Playlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class PlaylistsController extends Controller
 {
@@ -82,6 +83,10 @@ class PlaylistsController extends Controller
      */
     public function destroy(Playlist $playlist)
     {
+        $playlist->delete();
 
+        Session::flash('message', 'The playlist has been deleted');
+
+        return back();
     }
 }
