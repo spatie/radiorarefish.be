@@ -11,3 +11,5 @@ Homestead.yaml
 .env
 _ide_helper.php
 npm-debug.log
+public/css
+public/js
