@@ -50,7 +50,7 @@ class Playlist extends Model
 
     public function searchableAs()
     {
-        return 'radiorarefish.be.dev';
+        return config('scout.algolia.index');
     }
 
     public function updateFromRequest(PlaylistRequest $request)
