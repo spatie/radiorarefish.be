@@ -1,10 +1,6 @@
-<div class="row">
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-        </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
+<form method="GET" action="{{ action('Front\SearchController@index') }} "class="navbar-form">
+    <div class="form-group">
+        <input type="text" name="query" class="form-control" placeholder="Search playlists">
+    </div>
+    <button type="submit" class="btn btn-default">Search</button>
+</form>
