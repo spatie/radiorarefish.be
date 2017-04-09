@@ -27,7 +27,7 @@
 
         @include('front._partials.navigation')
 
-        @include('front._partials.headerBig')
+        @includeWhen(request()->path() === '/', 'front._partials.jumbotron')
 
         @yield('content')
 
