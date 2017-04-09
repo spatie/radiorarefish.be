@@ -24,7 +24,13 @@
 <div id="app">
 
     <div class="container">
+
+        @include('front._partials.navigation')
+
+        @include('front._partials.headerBig')
+
         @yield('content')
+
     </div>
 
 </div>
