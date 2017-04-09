@@ -46,7 +46,7 @@ class PlaylistsController extends Controller
     {
         $playlist->updateFromRequest($request);
 
-        Session::flash('message', 'The newsItem has been created');
+        Session::flash('message', 'The newsItem has been updated');
 
         return back();
     }
