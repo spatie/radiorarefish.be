@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Back;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\PlaylistRequest;
 use App\Playlist;
 use Carbon\Carbon;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\PlaylistRequest;
 use Illuminate\Support\Facades\Session;
 
 class PlaylistsController extends Controller

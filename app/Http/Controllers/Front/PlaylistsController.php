@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
 use App\Playlist;
+use App\Http\Controllers\Controller;
 
 class PlaylistsController extends Controller
 {
