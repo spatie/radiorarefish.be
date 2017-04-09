@@ -9,7 +9,7 @@ class PlaylistsController extends Controller
 {
     public function index()
     {
-        $playlists = Playlist::get();
+        $playlists = Playlist::simplePaginate(15);
 
         return view('front.playlists.index', compact('playlists'));
     }
