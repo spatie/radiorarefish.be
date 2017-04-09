@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0829c62bdba595ec33d289c18fe85b5",
+    "content-hash": "991a183aff49fd9db81fe471900e82dd",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -1321,6 +1321,53 @@
                 "uuid"
             ],
             "time": "2017-03-26T20:37:53+00:00"
+        },
+        {
+            "name": "spatie/laravel-tail",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-tail.git",
+                "reference": "5644ad81dddffb719c02027b843cbbe298f5eccd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-tail/zipball/5644ad81dddffb719c02027b843cbbe298f5eccd",
+                "reference": "5644ad81dddffb719c02027b843cbbe298f5eccd",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.4.0",
+                "illuminate/support": "~5.4.0",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Tail\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://murze.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily tail the application log in Laravel applications",
+            "homepage": "https://github.com/spatie/laravel-tail",
+            "keywords": [
+                "laravel",
+                "laravel-tail",
+                "log",
+                "tail"
+            ],
+            "time": "2017-03-21T14:36:45+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
