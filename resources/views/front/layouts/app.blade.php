@@ -22,6 +22,9 @@
     </script>
 </head>
 <body>
+
+@includeWhen(app()->environment() === 'production', 'front._partials.analytics')
+
 <div id="app">
 
     <div class="container">

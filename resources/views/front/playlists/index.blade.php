@@ -2,9 +2,8 @@
 
 @section('content')
 
-
     @foreach($playlists as $playlist)
-        <div class="row">
+
             <h2>
                 <a href="{{ action('Front\PlaylistsController@detail', [$playlist->slug]) }}">
                     {{ $playlist->name }}
@@ -12,10 +11,10 @@
             </h2>
 
             {!! $playlist->text !!}
-        </div>
+
     @endforeach
 
-    <div class="row">
+    <div>
         {!! $playlists->links() !!}
     </div>
 
