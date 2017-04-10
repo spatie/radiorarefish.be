@@ -14,7 +14,7 @@
 
     @endforeach
 
-    <div class="row">
+    <div>
         {!! $playlists->links() !!}
     </div>
 
