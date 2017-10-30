@@ -4,14 +4,15 @@ namespace App\Http\Controllers\Front;
 
 use App\Playlist;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $query = request()->get('query');
+        $query = $request->get('query');
 
-        $playlists = Playlist::search($query)->get();
+        $playlists = Playlist::search($request->get('request'))->get();
 
         return view('front.search.index', compact('query', 'playlists'));
     }
