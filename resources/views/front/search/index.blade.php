@@ -14,7 +14,7 @@
         @forelse($playlists as $playlist)
             <div class="row">
                 <h2>
-                    <a href="{{ action('Front\PlaylistsController@detail', [$playlist->slug]) }}">
+                    <a href="{{ action('PlaylistsController@detail', [$playlist->slug]) }}">
                         {{ $playlist->name }}
                     </a>
                 </h2>

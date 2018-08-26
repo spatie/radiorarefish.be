@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace App\Http\Controllers;
 
 use App\Playlist;
 use App\Http\Controllers\Controller;
@@ -9,7 +9,7 @@ class PlaylistsController extends Controller
 {
     public function index()
     {
-        $playlists = Playlist::simplePaginate(15);
+        $playlists = Playlist::orderByDesc('publish_date')->simplePaginate(15);
 
         return view('front.playlists.index', compact('playlists'));
     }

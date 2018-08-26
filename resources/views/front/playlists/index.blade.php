@@ -5,12 +5,12 @@
     @foreach($playlists as $playlist)
 
             <h2>
-                <a href="{{ action('Front\PlaylistsController@detail', [$playlist->slug]) }}">
+                <a href="{{ action('PlaylistsController@detail', [$playlist->slug]) }}">
                     {{ $playlist->name }}
                 </a>
             </h2>
 
-            {!! $playlist->text !!}
+            {!! $playlist->formatted_text !!}
 
     @endforeach
 

@@ -12,6 +12,6 @@ class PlaylistSeeder extends Seeder
      */
     public function run()
     {
-        factory(Playlist::class, 50)->create(['user_id' => 1]);
+        factory(Playlist::class, 50)->create();
     }
 }

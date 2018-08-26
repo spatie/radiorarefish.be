@@ -7,17 +7,25 @@
     ],
     "license": "MIT",
     "type": "project",
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/laravel/nova"
+        }
+    ],
     "require": {
         "php": ">=7.1.3",
         "algolia/algoliasearch-client-php": "^1.17",
-        "barryvdh/laravel-debugbar": "^2.3",
-        "barryvdh/laravel-ide-helper": "^2.3",
+        "barryvdh/laravel-debugbar": "^3.0",
+        "barryvdh/laravel-ide-helper": "^2.0",
         "laravel/framework": "5.6.*",
+        "laravel/nova": "dev-master#286e159d039fadceb2205f649485695d833a6478",
         "laravel/scout": "^3.0",
         "laravel/tinker": "~1.0",
         "spatie/laravel-menu": "^3.0",
         "spatie/laravel-sluggable": "^2.0",
-        "spatie/laravel-tail": "^2.0",
+        "spatie/laravel-tail": "^3.0",
         "fideloper/proxy": "~4.0"
     },
     "require-dev": {

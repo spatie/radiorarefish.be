@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Front;
-
-use App\Http\Controllers\Controller;
+namespace App\Http\Controllers;
 
 class ArticlesController extends Controller
 {
     public function howToListen()
     {
-        return view('front.articles.howToListen');
+        return view('front.articles.how-to-listen');
     }
 
     public function about()

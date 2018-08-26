@@ -33,9 +33,6 @@ $factory->define(App\Playlist::class, function (\Faker\Generator $faker) {
     return [
         'name' => $faker->sentence(),
         'text' => $playlistContent,
-        'user_id' => function () {
-            return factory(App\User::class)->create()->id;
-        },
         'publish_date' => $faker->dateTimeBetween(),
     ];
 });

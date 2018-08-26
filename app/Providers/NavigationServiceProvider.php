@@ -12,8 +12,8 @@ class NavigationServiceProvider extends ServiceProvider
         Menu::macro('main', function () {
             return Menu::new()
                ->addClass('nav navbar-nav')
-               ->action('Front\ArticlesController@about', 'About')
-               ->action('Front\ArticlesController@howToListen', 'How to listen')
+               ->action('ArticlesController@about', 'About')
+               ->action('ArticlesController@howToListen', 'How to listen')
                ->setActiveFromRequest();
         });
     }
