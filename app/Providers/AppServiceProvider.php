@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Schema;
 use Illuminate\Support\ServiceProvider;
+use Schema;
 
 class AppServiceProvider extends ServiceProvider
 {

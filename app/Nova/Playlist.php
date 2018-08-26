@@ -2,11 +2,11 @@
 
 namespace App\Nova;
 
-use Laravel\Nova\Fields\Date;
+use App\Models\Playlist as PlaylistModel;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
-use App\Models\Playlist as PlaylistModel;
 
 class Playlist extends Resource
 {

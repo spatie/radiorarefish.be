@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Menu;
 use Illuminate\Support\ServiceProvider;
+use Menu;
 
 class NavigationServiceProvider extends ServiceProvider
 {
