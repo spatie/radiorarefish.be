@@ -52,8 +52,8 @@ cd '{{ $pathOnServer }}'
 php artisan clear-compiled
 php artisan cache:clear
 
-php artisan optimize
 php artisan config:cache
+php artisan view:cache
 sudo service php7.1-fpm restart
 @endtask
 
