@@ -7,7 +7,6 @@
     ],
     "license": "MIT",
     "type": "project",
-
     "repositories": [
         {
             "type": "vcs",
@@ -19,7 +18,7 @@
         "algolia/algoliasearch-client-php": "^1.17",
         "barryvdh/laravel-debugbar": "^3.0",
         "barryvdh/laravel-ide-helper": "^2.0",
-        "laravel/framework": "5.6.*",
+        "laravel/framework": "5.7.*",
         "laravel/nova": "dev-master#286e159d039fadceb2205f649485695d833a6478",
         "laravel/scout": "^3.0",
         "laravel/tinker": "~1.0",
@@ -34,7 +33,8 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "nunomaduro/collision": "~1.1",
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~6.0",
+        "beyondcode/laravel-dump-server": "~1.0"
     },
     "autoload": {
         "classmap": [
