@@ -10,8 +10,8 @@ use Spatie\Sluggable\SlugOptions;
 
 class Playlist extends Model
 {
-    use Searchable,
-        HasSlug;
+    use HasSlug;
+        // Searchable;
 
     public $dates = ['publish_date'];
 
@@ -29,8 +29,10 @@ class Playlist extends Model
         return (new Parsedown())->text($this->text);
     }
 
+    /*
     public function searchableAs()
     {
         return config('scout.algolia.index');
     }
+    */
 }
